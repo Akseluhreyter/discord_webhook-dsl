@@ -67,9 +67,10 @@ class DiscordWebhook
         :embeds           => @embeds&.map(&:to_h),
         :allowed_mentions => @allowed_mentions&.to_h,
         :attachments      => @attachments&.map(&:to_h),
+        :poll             => @poll&.to_h,
         :flags            => @flags,
         :thread_name      => @thread_name,
-        :poll             => @poll&.to_h,
+        :files            => @files
       }
     end
     alias to_hash to_h
